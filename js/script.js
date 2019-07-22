@@ -6,24 +6,53 @@ project 1 - A Random Quote Generator
 // Study guide for this project - https://drive.google.com/file/d/1s5grutGuQFwJcQP8bFwEI69Q8FCkGdDk/view?usp=sharing
 
 
-/*** 
-  Create the array of quote objects and name it `quotes`.
-  Add at least five quote objects to the `quotes` array.
-  Give each quote object a `quote` and `source` property.
-  Add the `citation` property to at least one object in the array.
-  Add the `year` property to at least one object in the array.
-  Use console.log() to log your array of quotes to the console.
-***/
+// Array named "quotes" of objects of quotes from different sources
+let quotes = [
+  {
+    quote: "Learning is a journey. View missteps as an opportunity to learn and move forward.",
+    source: "Emily Schweiss",
+    citation: "Blog",
+    year: 2017
 
+  },
+  {
+    quote: "When something is important enough, you do it even if the odds are not in your favor.",
+    source: "Elon Musk"
+    },
+  {
+    quote: "The seed must grow regardless of the fact that it’s planted in stone.",
+    source: "Tupac Shakur"
+  },
+  {
+    quote: "By giving people the power to share, we're making the world more transparent.",
+    source: "Mark Zuckerberg",
+    citation: "Facebook"
+  },
+  {
+    quote: "Great achievers are driven, not so much by the pursuit of success but by the fear of failure.",
+    source: "Larry Ellison",
+    citation: "Oracle"
+  },
+  {
+    quote: "You don’t have to thank me. I absorbed you. We’re practically related.",
+    source: "Captain Marvel",
+    citation: "Captain Marvel Vol 7 #8",
+    year: 2017
+  }
+];
 
-
+// logs the quotes array to the console
+console.log(quotes);
 
 /***
   Create the `getRandomQuote` function to:
    - Create a variable to store a random number 
-   - Cse the random number to `return` a random quote object from the `quotes` array.
+   - Use the random number to `return` a random quote object from the `quotes` array.
 ***/
-
+function getRandomQuote(quo) {
+  var randomNumber = Math.floor(Math.random() * 6) + 1;
+  return randomNumber.quote;
+}
 
 
 
@@ -39,7 +68,9 @@ project 1 - A Random Quote Generator
    - Don't forget to close that final `p` tag.
    - Set the `innerHTML` of the `quote-box` div to the HTML string. 
 ***/
-
+function printQuote() {
+  getRandomQuote();
+}
 
 
 
