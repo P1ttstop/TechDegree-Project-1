@@ -41,16 +41,12 @@ let quotes = [
   }
 ];
 
-// logs the quotes array to the console
-console.log(quotes);
-
 //this function generates a random quote from the quotes array
 function getRandomQuote() {
   //this variable holds a randomized quote
   let randomNumber = quotes[Math.floor(Math.random() * quotes.length)];
   return randomNumber;
 }
-
 
 /***
   Create the `printQuote` function to: 
@@ -66,13 +62,22 @@ function getRandomQuote() {
 ***/
 function printQuote() {
   //calls the getRandomQuote function
-  let getRandom = getRandomQuote();
+  let randQuote = getRandomQuote();
   let htmlString = "";
-  htmlString += "<p>" + quotes.quote + "</p>";
-  htmlString += "<p>" + quotes.source + "</p>";
+  htmlString += '<p class="quotes">' + randQuote.quote + '</p>';
+  htmlString += '<p class="source">' + randQuote.source;
+  //If the quote has a key: citation a span element will appear in the string
+  if(randQuote.citation) {
+    htmlString += '<span class="citation">' + randQuote.citation + '</span>';
+  }
+  //If the quote has a key: year a span element will appear in the string
+  if(randQuote.year) {
+    htmlString += '<span class="year">' + randQuote.year + '</span>';
+  }
+  htmlString += '</p>';
+  //sets the div element with id "quote-box" to the string above
+  document.getElementById("quote-box").innerHTML = htmlString;
 }
-
-
 
 /***
   When the "Show another quote" button is clicked, the event listener 
@@ -82,6 +87,3 @@ function printQuote() {
 ***/
 
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
-
-
-// Remember to delete the comments that came with this file, and replace them with your own code comments.
