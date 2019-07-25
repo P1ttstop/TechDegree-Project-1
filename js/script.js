@@ -103,9 +103,10 @@ function printQuote() {
   document.getElementById("quote-box").innerHTML = htmlString;
   //calls the randomColor function
   randomColor();
-  //calls the changQuote function
-  changeQuote();
 }
+
+ //calls the changeQuote function
+ changeQuote();
 
 //allows the button tag to change the quote when clicked
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
