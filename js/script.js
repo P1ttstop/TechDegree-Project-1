@@ -54,10 +54,10 @@ function getRandomQuote() {
 
 //this function sets a random value to the red, blue, and green colors
 function randomColor() {
-  //sets x, y, and z to random number from 0 to 256
-    let x = Math.floor(Math.random() * 256);
-    let y = Math.floor(Math.random() * 256);
-    let z = Math.floor(Math.random() * 256);
+  //sets x, y, and z to random number from 0 to 192
+    let x = Math.floor(Math.random() * 192);
+    let y = Math.floor(Math.random() * 192);
+    let z = Math.floor(Math.random() * 192);
 
     //this variable holds the string of the rgb value
     let color = "rgb(" + x + "," + y + "," + z + ")";
@@ -106,7 +106,6 @@ function printQuote() {
 }
 
  //calls the changeQuote function
- changeQuote();
-
+changeQuote();
 //allows the button tag to change the quote when clicked
 document.getElementById('loadQuote').addEventListener("click", printQuote, false);
