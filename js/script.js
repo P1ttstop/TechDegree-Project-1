@@ -78,9 +78,6 @@ function changeQuote() {
 function printQuote() {
   //calls the getRandomQuote function
   let randQuote = getRandomQuote();
-  let addElement;
-  let text;
-  let next;
   let span = document.createElement('SPAN');
   let htmlString = "";
   //Adds the quote and source to the html page
